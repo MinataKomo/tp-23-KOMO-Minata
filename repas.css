@@ -1,0 +1,467 @@
+
+header{
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:  rgb(180, 178, 117);
+    width: 94.3%;
+    height: 8vh;
+    color: white;
+    padding: 0 2rem;
+    z-index: 20;
+    
+ }
+ nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    /* text-decoration: solid; */
+ }
+ 
+ .toggle{
+    display: none;
+ }
+ /* .ouvrir{
+    display: block;
+ }
+ .fermer{
+    display: none;
+ } */
+ .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 600px;
+ }
+ .menu li a{
+    color: aliceblue;
+    text-decoration: none;
+ }
+ .btn{
+    /* border: 0;
+    background: pink;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px; */
+    padding: 10px 20px;
+    background-color: orangered;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+ }
+ 
+ 
+ 
+ header::after{
+    content: "";
+    height: 150px;
+    width: 150px;
+    /* background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.94), transparent); */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: 0.20;
+    opacity: 0;
+    /* left: var(---x);
+    top: var(---y); */
+ }
+ header:hover::after{
+    opacity: 1;
+ }
+ /* .hero */
+ @media screen and (max-width : 300px){
+    header{
+       width: 100%;
+    }
+    nav{
+       justify-content: space-around;
+    }
+     .toggle{
+         display: block;
+         font-size: 2rem;
+         cursor: pointer;
+         position: relative;
+         z-index: 20;
+         float: left;
+         /* background-color: #94d82d; */
+     }
+     .logo{
+         position: relative;
+         z-index: 26;
+     }
+     .ouvrir{
+        
+         display: block;
+       /* display: none; */
+     }
+     .fermer{
+        display: none;
+        color: aqua;
+        
+     }
+    .open .ouvrir{
+         display: none;
+         
+     }
+     .open .fermer{
+        display: block;
+        
+    }
+     .menu{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background: rgb(180, 174, 117);
+         /* font-style: ; */
+         flex-direction: column;
+         /* color: black; */
+         /* padding: 2rem; */
+        justify-content: space-around;
+        transform: translate(-100%);
+        transition: 1s;
+     }
+     .open .menu{
+         transform: translate(0);
+     }
+    /* .open.fermer{
+        display: block;
+    } */
+ }
+
+
+
+
+
+
+
+
+
+
+.home{
+    display: flex;
+    width: 80%;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+    height: 400px;
+}
+.repas{
+    background-color: bisque;
+    width: 60%;
+    padding-top: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+
+}
+.img{
+    width: 30%;
+    
+}
+.img img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.repas h1{
+    font-size: 36px;
+}
+.repas p{
+    font-size: 20px;
+}
+/* -----------------reputation--------------- */
+.reputation{
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: rgb(223, 230, 165);
+}
+.reputation:hover{
+    box-shadow: 0 0 20px 0 black;
+}
+.reputation h1{
+    font-size: 35px;
+    text-align: center;
+}
+.reput{
+    display: flex;
+    margin: 100px auto;
+    width: 80%;
+}
+.row{
+    background: rgb(192, 177, 206);
+    margin: 20px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.row h3{
+    font-size: 25px;
+}
+.row p{
+    font-size: 20px;
+}
+.row:hover{
+    box-shadow: 0 0 20px 0 rgb(69, 96, 212);
+}
+@media screen and (max-width: 300px) {
+    .home{
+        height: 100%;
+        background: rgb(111, 194, 28);
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+    .repas{
+        width: 100%;
+    }
+    .img{
+        width: 100%;
+    }
+    .reput{
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+     .home h1, .reputation h1{
+        font-size: 30px;
+    }
+    .chaudes{
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+    .frais{
+        margin: 0;
+        width: 100%;
+        background: navy;
+        height: 100%;
+    }
+    .chaud{
+        margin: 0;
+        
+        background-color: aquamarine;
+    }
+    .chaud h3{
+        font-size: 2px;
+    }
+    .chaud p{
+        font-size: 2px;
+    }
+
+
+
+
+
+    .footer{
+        /* flex-direction: row; */
+        width: 100%;
+        margin-top: 100px;
+        flex-direction: wrap;
+        flex-flow: row;
+        height: 100%;
+    }
+    .foot{
+        width: 40%;
+        height: 100%;
+        margin: 0%;
+        /* height: 200px; */
+    }
+    .viande{
+        flex-direction: column;
+        width: 100%;
+    }
+    .boisson{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    .vins{
+        width: 100%;
+    }
+}
+/* ----------------entrees------------------ */
+.entre h1{
+    text-align: center;
+    font-size: 35px;
+    color: brown;
+}
+.chaudes{
+    display: flex;
+    margin: 10px auto;
+    width: 50%;
+    /* background: gold; */
+}
+.chaud{
+    width: 100%;
+    background-color: rgb(179, 214, 190);
+    border-radius: 10px;
+    padding: 10px;
+    /* height: 150px; */
+    margin: 20px;
+}
+.chaud p{
+    font-size: 20px;
+}
+.chaud h3{
+    font-size: 30px;
+}
+
+/* ------------plat-------------- */
+.plat{
+    background-color: rgb(224, 187, 193);
+    padding: 50px;
+}
+.plat h1{
+    text-align: center;
+    font-size: 35px;
+    color: blue;
+}
+.viande{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.vid{
+    background-color: bisque;
+    width: 50%;
+    height: ;
+    margin: 10px;
+}
+.vid img{
+    width: 100%;
+}
+.vid img:hover{
+    width: 90%;
+}
+.vi{
+    text-align: center;
+}
+.voir{
+    background: coral;
+    border: none;
+    width: 20%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.voir:hover{
+    background-color: rgb(190, 141, 141);
+}
+/* -------------------dessert------------------- */
+.h1{
+    text-align: center;
+    font-size: 35px;
+}
+.frais{
+    margin-left: 100px;
+    /* margin-right: 300px; */
+    background: rgb(218, 231, 224);
+    width: 30%;
+    height: 150px;
+    padding: 20px;
+}
+.frai{
+    margin-top: 50px;
+    margin-left: 400px;
+    /* margin-right: 300px; */
+    background: rgb(218, 231, 224);
+    width: 30%;
+    height: 150px;
+    padding: 10px;
+}
+.fra{
+    margin-top: 90px;
+    margin-left: 700px;
+    /* margin-right: 300px; */
+    background: rgb(218, 231, 224);
+    width: 30%;
+    height: 180px;
+    padding: 10px;
+}
+.frais p, .frai p, .fra p{
+    font-size: 20px;
+
+}
+.frais h3, .frai h3, .fra h3{
+    font-size: 29px;
+}
+/* .ligne{
+    background: rgb(180, 128, 23);
+    width: 80%;
+    margin-left: 100px;
+    height: 10px;
+    
+}
+.lignes{
+    display: flex;
+}
+.lig{
+    width: 10px;
+    height: 100px;
+    background: rgb(180, 128, 23);
+}
+.h1{
+    /* margin-bottom: 100px; */
+    /* background-color: aqua;
+    font-size: 36px;
+} */
+
+/* ---------------vin et boisson------------------ */
+.boisson{
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    justify-content: center;
+}
+.vins{
+    border: 2px solid rgb(123, 90, 153);
+    /* height: 250px; */
+    width: 25%;
+    padding: 10px;
+    background: rgb(158, 147, 168);
+    margin: 10px;
+   
+}
+.vins p{
+    font-size: 20px;
+}
+.vins h2{
+    font-size: 25px;
+}
+/* -------------footer-------------- */
+.footer{
+    width: 100%;
+    height: auto;
+    /* background: rgb(102, 0, 255); */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin-top: 40px;
+    
+}
+.foot{
+    width: 15%;
+    height: 100px;
+    /* background: yellow; */
+    margin: 0px;
+    /* box-sizing: border-box; */
+    font-size: 15px;
+    
+}
+.foot img{
+    width: 50px;
+    height: 20px;
+}
